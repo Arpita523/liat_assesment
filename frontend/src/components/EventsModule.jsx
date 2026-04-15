@@ -33,6 +33,24 @@ const EventsModule = () => {
             </p>
           </motion.div>
 
+          {/* Past Highlights Video Section */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            style={{ marginBottom: '5rem', position: 'relative', borderRadius: 'var(--border-radius)', overflow: 'hidden', height: '500px', border: '1px solid var(--color-border)' }}
+          >
+            <video
+              autoPlay loop muted playsInline
+              src="https://videos.pexels.com/video-files/5198083/5198083-uhd_2560_1440_25fps.mp4"
+              style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'brightness(0.6)' }}
+            />
+            <div style={{ position: 'absolute', bottom: '3rem', left: '3rem', zIndex: 10 }}>
+              <p style={{ color: 'var(--color-text-accent)', textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '0.5rem', fontWeight: 600 }}>Past Highlights</p>
+              <h2 style={{ fontSize: '2.5rem', textShadow: '0 4px 20px rgba(0,0,0,0.8)' }}>Unforgettable Experiences</h2>
+            </div>
+          </motion.div>
+
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '3rem' }}>
             {/* Venue 1 */}
             <motion.div
