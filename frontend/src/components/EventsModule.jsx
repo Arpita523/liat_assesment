@@ -63,6 +63,7 @@ const EventsModule = () => {
               <img 
                 src="/concert_rotunda.png" 
                 alt="Huntington Bank Rotunda" 
+                loading="lazy"
                 style={{ width: '100%', height: '300px', objectFit: 'cover' }}
               />
               <div style={{ padding: '2rem' }}>
@@ -87,6 +88,7 @@ const EventsModule = () => {
               <img 
                 src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="Convention Space" 
+                loading="lazy"
                 style={{ width: '100%', height: '300px', objectFit: 'cover' }}
               />
               <div style={{ padding: '2rem' }}>

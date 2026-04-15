@@ -49,7 +49,7 @@ const LeasingModule = () => {
                 <button id="leasing-luxury-btn" className="luxury-button" style={{ borderColor: 'var(--color-text-accent)', color: 'var(--color-text-accent)' }}>View The Avenue Demographics</button>
               </div>
               <div style={{ flex: '1 1 300px', height: '300px', borderRadius: 'var(--border-radius)', overflow: 'hidden' }}>
-                <img src="/luxury_avenue.png" alt="Luxury Leasing" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="/luxury_avenue.png" alt="Luxury Leasing" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </motion.div>
 
@@ -61,7 +61,7 @@ const LeasingModule = () => {
               style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', alignItems: 'center', background: 'var(--color-surface)', padding: '2rem', borderRadius: 'var(--border-radius)' }}
             >
               <div style={{ flex: '1 1 300px', height: '300px', borderRadius: 'var(--border-radius)', overflow: 'hidden', order: -1 }}>
-                <img src="https://images.unsplash.com/photo-1542272201-b1ca555f8505?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mass Market" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="https://images.unsplash.com/photo-1542272201-b1ca555f8505?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mass Market" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div style={{ flex: '1 1 300px' }}>
                 <h3 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Contemporary & Mass Market</h3>
@@ -87,7 +87,7 @@ const LeasingModule = () => {
                 <button id="leasing-popup-btn" className="luxury-button">Explore Pop-Up Rates</button>
               </div>
               <div style={{ flex: '1 1 300px', height: '300px', borderRadius: 'var(--border-radius)', overflow: 'hidden' }}>
-                <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pop Up Leasing" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pop Up Leasing" loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             </motion.div>
 

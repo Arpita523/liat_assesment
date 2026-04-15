@@ -38,9 +38,9 @@ const Navigation = () => {
         borderBottom: scrolled ? '1px solid rgba(255,255,255,0.05)' : 'none',
         transition: 'all 0.3s ease'
       }}>
-        <div style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', fontWeight: 600, letterSpacing: '2px' }}>
+        <Link to="/" style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', fontWeight: 600, letterSpacing: '2px', textDecoration: 'none', color: 'inherit' }}>
           MOA <span style={{ color: 'var(--color-text-accent)' }}>|</span> SALES
-        </div>
+        </Link>
         
         <button 
           onClick={() => setMenuOpen(!menuOpen)}

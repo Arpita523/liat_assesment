@@ -123,3 +123,62 @@ img, video {
   border-radius: var(--border-radius);
   padding: var(--spacing-xl);
 }
+
+/* Navigation Link Hover */
+nav a:hover,
+nav button:hover {
+  opacity: 0.85;
+}
+
+/* Focus-visible for accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-text-accent);
+  outline-offset: 2px;
+}
+
+/* Page transition fade */
+.app-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ─── Responsive: Tablet ─── */
+@media (max-width: 1024px) {
+  .section {
+    padding: 5rem 0;
+  }
+  .container {
+    padding: 0 1.5rem;
+  }
+  h1 { font-size: 2.8rem !important; }
+  h2 { font-size: 2.2rem !important; }
+}
+
+/* ─── Responsive: Mobile ─── */
+@media (max-width: 640px) {
+  .section {
+    padding: 3.5rem 0;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.8rem !important; }
+
+  .glass-panel {
+    padding: var(--spacing-lg);
+  }
+
+  .luxury-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.8rem;
+  }
+}
