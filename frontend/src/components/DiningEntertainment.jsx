@@ -55,7 +55,7 @@ const DiningEntertainment = () => {
           >
             <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 1, background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)' }} />
             <img 
-              src="https://images.unsplash.com/photo-1513889961551-628c1e2e2882?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src="/indoor_theme_park.png" 
               alt="Indoor Theme Park" 
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             />

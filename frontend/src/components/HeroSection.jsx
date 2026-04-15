@@ -65,6 +65,7 @@ const HeroSection = () => {
           </p>
           
           <motion.button 
+            id="hero-explore-btn"
             className="luxury-button"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

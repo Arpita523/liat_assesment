@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const EventsPlatform = () => {
   const [formData, setFormData] = useState({ name: '', company: '', interest: 'leasing', message: '' });
@@ -53,11 +54,13 @@ const EventsPlatform = () => {
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
               <li style={{ borderBottom: '1px solid var(--color-border)', paddingBottom: '1rem' }}>
                 <span style={{ fontSize: '1.2rem', fontWeight: 600, display: 'block', color: 'var(--color-text-accent)' }}>Huntington Bank Rotunda</span>
-                <span style={{ color: 'var(--color-text-secondary)' }}>The iconic center stage for major concerts and media events.</span>
+                <span style={{ color: 'var(--color-text-secondary)', display: 'block', marginBottom: '0.5rem' }}>The iconic center stage for major concerts and media events.</span>
+                <Link id="event-venues-link" to="/events" className="luxury-button" style={{ display: 'inline-flex', padding: '0.5rem 1rem', fontSize: '0.8rem', textDecoration: 'none' }}>Explore Venues</Link>
               </li>
               <li style={{ borderBottom: '1px solid var(--color-border)', paddingBottom: '1rem' }}>
                 <span style={{ fontSize: '1.2rem', fontWeight: 600, display: 'block', color: 'var(--color-text-accent)' }}>Brand Sponsorships</span>
-                <span style={{ color: 'var(--color-text-secondary)' }}>Naming rights, digital takeovers, and experiential domains.</span>
+                <span style={{ color: 'var(--color-text-secondary)', display: 'block', marginBottom: '0.5rem' }}>Naming rights, digital takeovers, and experiential domains.</span>
+                <Link id="event-sponsorships-link" to="/sponsorship" className="luxury-button" style={{ display: 'inline-flex', padding: '0.5rem 1rem', fontSize: '0.8rem', textDecoration: 'none' }}>View Tiers</Link>
               </li>
             </ul>
           </motion.div>
@@ -77,17 +80,17 @@ const EventsPlatform = () => {
             
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               <input 
-                type="text" name="name" placeholder="Full Name" required
+                id="contact-name" type="text" name="name" placeholder="Full Name" required
                 value={formData.name} onChange={handleChange}
                 style={{ padding: '1rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--color-border)', borderRadius: '4px', color: '#fff', fontFamily: 'var(--font-sans)' }}
               />
               <input 
-                type="text" name="company" placeholder="Company / Brand" required
+                id="contact-company" type="text" name="company" placeholder="Company / Brand" required
                 value={formData.company} onChange={handleChange}
                 style={{ padding: '1rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--color-border)', borderRadius: '4px', color: '#fff', fontFamily: 'var(--font-sans)' }}
               />
               <select 
-                name="interest" value={formData.interest} onChange={handleChange}
+                id="contact-interest" name="interest" value={formData.interest} onChange={handleChange}
                 style={{ padding: '1rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--color-border)', borderRadius: '4px', color: '#fff', fontFamily: 'var(--font-sans)', appearance: 'none' }}
               >
                 <option value="leasing" style={{ color: '#000' }}>Retail Leasing</option>
@@ -95,13 +98,13 @@ const EventsPlatform = () => {
                 <option value="events" style={{ color: '#000' }}>Event Booking</option>
               </select>
               <textarea 
-                name="message" placeholder="Optional details..." rows="3"
+                id="contact-message" name="message" placeholder="Optional details..." rows="3"
                 value={formData.message} onChange={handleChange}
                 style={{ padding: '1rem', background: 'rgba(0,0,0,0.5)', border: '1px solid var(--color-border)', borderRadius: '4px', color: '#fff', fontFamily: 'var(--font-sans)', resize: 'none' }}
               />
               
               <button 
-                type="submit" 
+                id="contact-submit-btn" type="submit" 
                 className="luxury-button" 
                 disabled={formStatus.status === 'submitting'}
                 style={{ background: 'var(--color-text-accent)', color: '#000', border: 'none', fontWeight: 600 }}

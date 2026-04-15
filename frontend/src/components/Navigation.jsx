@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const linkStyle = {
+  fontFamily: 'var(--font-sans)',
+  fontSize: '1.1rem',
+  color: '#fff',
+  textDecoration: 'none',
+  transition: 'color 0.2s ease',
+};
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -61,22 +70,14 @@ const Navigation = () => {
             }}
           >
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              {['The Property', 'Luxury & Retail', 'Entertainment', 'Events & Leasing'].map((item, i) => (
-                <li key={i}>
-                  <a href={`#${item.toLowerCase().replace(/ /g, '-')}`} style={{
-                    fontFamily: 'var(--font-sans)',
-                    fontSize: '1.1rem',
-                    color: '#fff',
-                    transition: 'color 0.2s ease',
-                  }}
-                  onMouseOver={(e) => e.target.style.color = 'var(--color-text-accent)'}
-                  onMouseOut={(e) => e.target.style.color = '#fff'}
-                  onClick={() => setMenuOpen(false)}
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li><Link to="/" onClick={() => setMenuOpen(false)} style={linkStyle}>Overview</Link></li>
+              <li><Link to="/leasing" onClick={() => setMenuOpen(false)} style={linkStyle}>Leasing Paths</Link></li>
+              <li><Link to="/events" onClick={() => setMenuOpen(false)} style={linkStyle}>Events & Venues</Link></li>
+              <li><Link to="/sponsorship" onClick={() => setMenuOpen(false)} style={linkStyle}>Sponsorship Tiers</Link></li>
+              
+              <li style={{ borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1rem', marginTop: '0.5rem' }}>
+                <a href="/#events-&-leasing" onClick={() => setMenuOpen(false)} style={{...linkStyle, color: 'var(--color-text-accent)'}}>Contact Sales</a>
+              </li>
             </ul>
           </motion.div>
         )}

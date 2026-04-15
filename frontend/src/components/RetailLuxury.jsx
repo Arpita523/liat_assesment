@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const RetailLuxury = () => {
   return (
@@ -28,7 +29,7 @@ const RetailLuxury = () => {
                 With exclusive boutiques, tailored concierges, and high-net-worth customer demographics, 
                 The Avenue provides the perfect backdrop for luxury flagships.
               </p>
-              <button className="luxury-button">View Leasing Opportunities</button>
+              <Link id="retail-leasing-btn" to="/leasing" className="luxury-button" style={{ display: 'inline-flex', textDecoration: 'none' }}>View Leasing Opportunities</Link>
             </motion.div>
             
             <motion.div
@@ -39,7 +40,7 @@ const RetailLuxury = () => {
               style={{ position: 'relative', height: '500px', borderRadius: 'var(--border-radius)', overflow: 'hidden' }}
             >
               <img 
-                src="https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                src="/luxury_avenue.png" 
                 alt="Luxury Retail Storefront"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
